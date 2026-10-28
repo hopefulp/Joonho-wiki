@@ -868,7 +868,7 @@ VASP
     - PAW radial sets
 - Pseudo potential in POTCAR is real space representation
     - it is internally transformed to k-space to be used in the calculation
-        - $V\left(k\right)=4\pi  \int _{0}^{\infty }{{r}^{2}V\left(r\right)\frac{sin\left(kr\right)}{kr}dr}$
+        - \(V\left(k\right)=4\pi  \int _{0}^{\infty }{{r}^{2}V\left(r\right)\frac{sin\left(kr\right)}{kr}dr}\)
         - pseudopotential in reciprocal space used in the plane-wave basis in VASP
 - get POTCAR
     - genpotcar.py
@@ -1116,12 +1116,12 @@ VASP
 - characteristic
     - very slow
 - PBE functional
-    - ${E}_{xc}^{PBE0}= \frac{1}{4} {E}_{x}+ \frac{3}{4} {E}_{x}^{PBE}+ {E}_{c}^{PBE}$
+    - \({E}_{xc}^{PBE0}= \frac{1}{4} {E}_{x}+ \frac{3}{4} {E}_{x}^{PBE}+ {E}_{c}^{PBE}\)
     - HSE (Heyd-Scuseria-Ernzerhof)
         - error function screened Coulomb potential for exchange energy
             - to improve computational efficiency, especially for metallic system
-        - ${E}_{xc}^{HSE}= \frac{1}{4} {E}_{x}^{SR} \left(\mu \right)+ \frac{3}{4} {E}_{x}^{PBE,SR}\left(\mu \right)+  {E}_{x}^{PBE,LR}\left(\mu \right)+ {E}_{c}^{PBE}$
-            - $\frac{1}{r}= {S}_{\mu }\left(r\right)+ {L}_{\mu }\left(r\right)= \frac{erfc\left(\mu  r\right)}{r}+ \frac{erf\left(\mu  r\right)}{r}$
+        - \({E}_{xc}^{HSE}= \frac{1}{4} {E}_{x}^{SR} \left(\mu \right)+ \frac{3}{4} {E}_{x}^{PBE,SR}\left(\mu \right)+  {E}_{x}^{PBE,LR}\left(\mu \right)+ {E}_{c}^{PBE}\)
+            - \(\frac{1}{r}= {S}_{\mu }\left(r\right)+ {L}_{\mu }\left(r\right)= \frac{erfc\left(\mu  r\right)}{r}+ \frac{erf\left(\mu  r\right)}{r}\)
             - μ → 0
                 - L<sub>μ</sub>(r) = erf(μr) = 0, PBE0
             - μ → ∞
@@ -1749,12 +1749,12 @@ VASP
 - LDOS: local density of state
     - Projected on position or atom
         - For atom, Wigner-Seitz radius is used for integration
-        - $\int {\sum _{k}{{\left|\left⟨\hat{r}\right⟩\right|}^{2}}dr}$
+        - \(\int {\sum _{k}{{\left|\left⟨\hat{r}\right⟩\right|}^{2}}dr}\)
     - Wave function
-        - $|\left.k\right⟩=\sum _{G}{{C}_{G}{e}^{i\left(\hat{k}+\hat{G}\right)∙\hat{r}}}$ where C is amplitude k is wave vector in BZ and G is reciprocal vector and r is location
+        - \(|\left.k\right⟩=\sum _{G}{{C}_{G}{e}^{i\left(\hat{k}+\hat{G}\right)∙\hat{r}}}\) where C is amplitude k is wave vector in BZ and G is reciprocal vector and r is location
 - PDOS: partial density of state
     - Projected on wave function
-        - $\sum _{k}{\sum _{lm}{\left⟨\hat{r}lm\right⟩}}$
+        - \(\sum _{k}{\sum _{lm}{\left⟨\hat{r}lm\right⟩}}\)
         - All the atoms have H-like orbitals with different Z
 - Actually there is no difference between LDOS and PDOS
 
@@ -2313,7 +2313,7 @@ VASP
 
 | CDD | PCD |
 | --- | --- |
-| $∆\rho \left(r\right)= {\rho }_{\frac{{NH}_{2}}{Mo{S}_{2}}}\left(r\right)- {\rho }_{Mo{S}_{2}}\left(r\right)- {\rho }_{{NH}_{2}}\left(r\right)$<br>at fixed configuration | For spin=2, PARCHG has total (${\rho }_{tot})$ & spin (${\rho }_{mag})$<br>${\rho }_{tot}= {\rho }_{↑}+{\rho }_{↓}$<br>${\rho }_{mag}= {\rho }_{↑}-{\rho }_{↓}$<br>For upspin, ${\rho }_{↑}= \frac{{\rho }_{tot}+{\rho }_{mag} }{2}$<br>For down spin, ${\rho }_{↑}= \frac{{\rho }_{tot}-{\rho }_{mag} }{2}$<br> |
+| \(∆\rho \left(r\right)= {\rho }_{\frac{{NH}_{2}}{Mo{S}_{2}}}\left(r\right)- {\rho }_{Mo{S}_{2}}\left(r\right)- {\rho }_{{NH}_{2}}\left(r\right)\)<br>at fixed configuration | For spin=2, PARCHG has total (\({\rho }_{tot})\) & spin (\({\rho }_{mag})\)<br>\({\rho }_{tot}= {\rho }_{↑}+{\rho }_{↓}\)<br>\({\rho }_{mag}= {\rho }_{↑}-{\rho }_{↓}\)<br>For upspin, \({\rho }_{↑}= \frac{{\rho }_{tot}+{\rho }_{mag} }{2}\)<br>For down spin, \({\rho }_{↑}= \frac{{\rho }_{tot}-{\rho }_{mag} }{2}\)<br> |
 | Net charge redistribution<br>(two colors for accumulation/depletion) | Spatial distribution of a specific KS state near Fermi level |
 | Charge transfer | Orbital character of defect state |
 | Polarization | Localization |
@@ -2365,7 +2365,7 @@ VASP
                     - control Properties/Isosurfaces
         - (old) plot charge density difference between before and after combination
             - plot using vesta  test again
-                - ${\rho }_{diff}= {CHGCAR}_{AB}-{CHGCAR}_{A}- {CHGCAR}_{B}$
+                - \({\rho }_{diff}= {CHGCAR}_{AB}-{CHGCAR}_{A}- {CHGCAR}_{B}\)
                 - vesta
                     - Load CHGCAR<sub>AB</sub>, then CHGCAR<sub>A</sub> and CHGCAR<sub>B</sub> with - sense
                         - cf. visual\_program.doc -\> [vesta plot](<file:///C:\Users\hopef\AppData\Roaming\Microsoft\Word\visual_program.docx>)
@@ -2562,7 +2562,7 @@ Figure 1 ACF.dat format
     - NEB vs CI-NEB (supported by VTST)
         - NEB
             - ![vasp figure 2](assets/vasp/image2.png)
-            - ${F}_{i}^{NEB}= - \nabla  {\left.{E}_{i}\right⌉}_{⊥}+ {\left.{F}_{i}^{spring}\right⌉}_{∥}$
+            - \({F}_{i}^{NEB}= - \nabla  {\left.{E}_{i}\right⌉}_{⊥}+ {\left.{F}_{i}^{spring}\right⌉}_{∥}\)
                 - force on each image is decomposed to vertical and parallel to potential surface
                 - can find minimum energy force but no guarantee to put image at saddle point
         - CI-NEB
